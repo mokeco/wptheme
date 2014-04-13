@@ -95,6 +95,12 @@ p.sv-title{
 	width: 0.8em;
 }
 
+.formErrorContent {
+	position: absolute;
+	top: 40px;
+	right: 160px;
+}
+
 @media only screen and (max-width: 40.000em) {
 	  [class*="block-grid-"] > li {
 	    width: 100%;
