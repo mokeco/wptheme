@@ -71,7 +71,7 @@
 
 			<?php endwhile; ?>
 
-			<?php AistearTemplate_Este_content_nav( 'nav-below' ); ?>
+			<?php // AistearTemplate_Este_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

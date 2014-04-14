@@ -50,7 +50,7 @@
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'AistearTemplate_Este' ) );
-				if ( $categories_list && AistearTemplate_Este_categorized_blog() ) :
+				if ( $categories_list ) :
 			?>
 			<span class="cat-links">
 				<?php printf( __( 'Posted in %1$s', 'AistearTemplate_Este' ), $categories_list ); ?>
