@@ -1,107 +1,518 @@
-@charset "UTF-8";
 /*
-Theme Name:AistearTemplate_Este
-Theme URI:http://airstear.info/
-Description:アーシタンテンプレート（エステ向け）
-Author:M.Konagaya
-Author URI:http://airstear.info/
-Version:0.1
+Theme Name: AistearTemplate1
+Theme URI: http://underscores.me/
+Author: s.endoh
+Author URI: http://aistear.info/
+Description: Aistear Create Themes
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: AistearTemplate1
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ AistearTemplate1 is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
 */
 
 
-.row {
-	max-width:72.5rem;
-}
-.top-bar {
-	margin-left: 15px;
-	margin-right: 15px;
-}
-article h1, section h1 {
-	background: #909090;
-	color: #ffffff;
-	padding-left: 15px;
-	font-size: 1.6875rem;
-}
-p.sv-title{
-	margin-bottom:5px;
-}
-.sv-title {
-	position: relative;
-	padding-left:1.6em;
-	background-color: #ffffff;
-	font-size: 1.4em;
-}
-.sv-title:before {
-	content: "";
-	position: absolute;
-	background: #909090;
-	top: 0.35em;
-	left: 0.5em;
-	height: 0.8em;
-	width: 0.8em;
-}
-.tphead{
-	background-image:url(img/headback.jpg);
-	background-repeat: repeat;
-	max-width: 70.5rem;
-}
-.pickup {
-	padding-right: 0;
-}
-.pickup h2 {
-	background: #909090;
-	color: #ffffff;
-	padding-left: 15px;
-	margin-bottom: 0;
-	padding-top:5px;
-	padding-bottom:5px;
-	font-size: 1.3rem;
-}
-.widget-title {
-	background: #909090;
-	color: #ffffff;
-	padding-left: 15px;
-/*	font-size: 1.6875rem;*/
-	font-size: 1.3rem;
-	padding-top:5px;
-	padding-bottom:5px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	margin-left: -11px;
-	margin-right: -11px;
-}
-.widget {
-	border-left: 1px solid #909090 ;
-	border-right: 1px solid #909090 ;
-	border-bottom: 1px solid #909090 ;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	margin-bottom:30px;
-	padding-left:10px;
-	padding-right: 10px;
-}
-#extended-categories-2 ul li{
-	position: relative;
-	background-color: #ffffff;
-	list-style-type: none;
-}
-#extended-categories-2 li:before {
-	content: "";
-	position: absolute;
-	background: #909090;
-	top: 0.35em;
-	left: -1.2em;
-	height: 0.8em;
-	width: 0.8em;
-}
-.formErrorContent {
-	position: absolute;
-	top: 40px;
-	right: 160px;
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: Arial,Verdana, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
 }
 
-@media only screen and (max-width: 40.000em) {
-	  [class*="block-grid-"] > li {
-	    width: 100%;
-	}
+body {
+	border-top: 4px solid #4a2714;
+}
+
+#primary {
+	margin-bottom: 1em;
+}
+
+.wine{
+	color:#760035;
+	font-weight:bold;
+}
+
+.red{
+	color:#FF0000;
+	font-weight:bold;
+}
+
+.imageborder{
+	border:solid 1px #ccc;
+	padding:4px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+#primary h1 {color:#4a2714;
+	padding-left: 0.5em;
+	font-size: 1.6em;
+	border-left: 0.5em solid #4a2714;
+}
+#primary h1.entry-title {
+	font-family: Arial,Verdana, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bolder;
+	border-left: none;
+	position: relative;
+	line-height: 1;
+	padding: 0.4em 0.8em 0.5em 1.5em;
+	color: #d96229;
+	background-color: #d4b7c5;
+	font-size: 1.4em;
+}
+#primary h1.entry-title:before {
+	content: "";
+	position: absolute;
+	background: #ffffff;
+	top: 0.5em;
+	left: 0.25em;
+	height: 0.8em;
+	width: 0.8em;
+}
+#secondary h1.widget-title {
+	background: #4a2714;
+	color: #fff;
+	font-size: 1em;
+	padding: 0.3em 0.5em;
+	margin: 0;
+}
+
+
+#primary h2 {
+color:#760035;
+padding: 0 0 0.5em 0em;
+font-size: 1.5em;
+border-bottom:dotted 3px #760035;
+}
+
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.clear {clear: both;
+}
+
+/* =Header
+----------------------------------------------- */
+
+header .site-branding {
+}
+header .site-branding .site-description {
+}
+header .site-branding .site-title {
+	margin-top:0;
+}
+header .site-branding .site-contact {
+	text-align: right;
+	padding-right: 0;
+}
+header .site-branding h2.site-description {
+	font-size: 1em;
+}
+
+header.page-header {
+	margin-top: 0;
+}
+
+
+/* =Home
+----------------------------------------------- */
+
+#home-banner .widget_sp_image-description {
+	position: absolute;
+	bottom: 0.2em;
+	background-color: #760035;
+}
+
+.home-info li.entry-info {
+	margin: 0.5em 0;
+	border-bottom: 1px dotted #404040;
+}
+.home-info li.entry-info .entry-date {
+	margin-right: 3em;
+}
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-main .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-main .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-main .gallery dd {
+	margin: 0;
+}
+.site-main .gallery-columns-4 .gallery-item {
+}
+.site-main .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+	border-style: solid;
+	border-width: thin;
+	border-color: #4a2714;
+}
+
+.textwidget {
+	padding:10px;
+	font-size:90%;
+}
+
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+.social {
+	margin-bottom: 1.5em;
+}
+
+/* =Top to
+----------------------------------------------- */
+.top-to {
+	left: 60%;
+	position: relative;
+}
+
+/* =Footer
+----------------------------------------------- */
+footer {
+	margin-top: 3em;
+	border-top: 1px solid #404040;
+	padding: 1em 0;
+}
+footer .site-info {
+	margin-top: 1em;
+	font-size: 0.8em;
+}
+
+
+/* =Custom btn
+----------------------------------------------- */
+
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {
+	color: #d96229;
+	background-color: #efcdbc;
+	width: 300px;
+	padding: 1.0em;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.btn-ttc .btntext{
+}
+
+
+/* =Navbar
+----------------------------------------------- */
+
+.navbar-inverse {
+	background-color: #4a2714;
+	border-color: #4a2714;
+}
+
+/* =Facebook Like Box
+----------------------------------------------- */
+
+div.fb_iframe_widget,
+div.fb_iframe_widget iframe[style],
+div.fb_iframe_widget span {
+	width: 100% !important;
+}
+
+
+/* =Site Map
+----------------------------------------------- */
+
+#sitemap_list {
+	background: initial !important;
+}
+
+/* =Slider
+----------------------------------------------- */
+
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #760035;
+ }
+
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides img {
+	 display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+	padding: 0.5em;
+ }
+.rslides_container {
+	margin-bottom: 50px;
+	position: relative;
+	float: left;
+	width: 100%;
+ }
+
+.rslides_nav {
+	z-index: 3;
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 50%;
+	left: 0;
+	opacity: 0.7;
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	height: 61px;
+	width: 38px;
+	background: transparent url("themes/themes.gif") no-repeat left top;
+	margin-top: -55px;
+}
+
+.rslides_nav:active {
+	opacity: 1.0;
+ }
+
+.rslides_nav.next {
+	left: auto;
+	background-position: right top;
+	right: 0;
+ }
+
+.rslides_nav:focus {
+	outline: none;
+ }
+
+.rslides_tabs {
+	margin-top: 10px;
+	text-align: center;
+ }
+
+.rslides_tabs li {
+	display: inline;
+	float: none;
+	_float: left;
+	*float: left;
+	margin-right: 5px;
+ }
+
+.rslides_tabs a {
+	text-indent: -9999px;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: #ccc;
+	background: rgba(0,0,0, .2);
+	display: inline-block;
+	_display: block;
+	*display: block;
+	-webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+	-moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+	box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+	width: 9px;
+	height: 9px;
+}
+
+.rslides_here a {
+	background: #222;
+	background: rgba(0,0,0, .8);
+ }
+.rslides .caption {
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	font-size: 150%;
+	padding: 12.5% 0;
+	text-align: center;
+	background: #000;
+	background: rgba(118, 0, 53, .8);
+	color: #fff;
+	height: 100%;
+	width: 50% !important;
+}
+@media (max-width: 768px) {
+	.rslides .caption { font-size: 100%; }
+}
+
+/* =Banner
+----------------------------------------------- */
+.single-post-widget .post-thumb a img {
+	max-width: 100%;}
+
+
+/* =widget_sp_image-3
+----------------------------------------------- */
+.widget_sp_image {
+	border: none;
 }

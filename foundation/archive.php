@@ -4,12 +4,12 @@
 		<main id="main" class="site-main" role="main">
 
 		<?php
-	/*		if( !is_front_page() ) :
+			if( !is_front_page() ) :
 				if ( function_exists( 'bread_crumb' ) ) :
 					bread_crumb(array( 'elm_class'=>'breadcrumb',) );
 				endif;
 			endif;
-*/		?>
+		?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -24,35 +24,35 @@
 
 						elseif ( is_author() ) :
 							the_post();
-							printf( __( 'Author: %s', 'AistearTemplate_Este' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'AistearTemplate1' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'AistearTemplate_Este' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'AistearTemplate1' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'AistearTemplate_Este' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Month: %s', 'AistearTemplate1' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'AistearTemplate_Este' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Year: %s', 'AistearTemplate1' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'AistearTemplate_Este' );
+							_e( 'Asides', 'AistearTemplate1' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'AistearTemplate_Este');
+							_e( 'Images', 'AistearTemplate1');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'AistearTemplate_Este' );
+							_e( 'Videos', 'AistearTemplate1' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'AistearTemplate_Este' );
+							_e( 'Quotes', 'AistearTemplate1' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'AistearTemplate_Este' );
+							_e( 'Links', 'AistearTemplate1' );
 
 						else :
-							_e( 'Archives', 'AistearTemplate_Este' );
+							_e( 'Archives', 'AistearTemplate1' );
 
 						endif;
 					?>
@@ -71,7 +71,7 @@
 
 			<?php endwhile; ?>
 
-			<?php // AistearTemplate_Este_content_nav( 'nav-below' ); ?>
+			<?php AistearTemplate1_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

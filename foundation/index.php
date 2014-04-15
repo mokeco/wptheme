@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package AistearTemplate_Este
+ * @package AistearTemplate1
  */
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php // AistearTemplate_Este_content_nav( 'nav-below' ); ?>
+			<?php AistearTemplate1_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 
