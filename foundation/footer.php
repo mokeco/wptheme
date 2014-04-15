@@ -5,7 +5,7 @@
 					<?php
 						$args = array(
 							'theme_location' => 'FooterNavigation',
-							'menu_class' => 'nav nav-pills nav-justified',
+							'menu_class' => 'footerMenu',
 							);
 						wp_nav_menu( $args );
 					?>
@@ -18,4 +18,6 @@
 　　<?php wp_footer(); ?>
 
   </body>
+</html>
+/body>
 </html>

@@ -25,30 +25,36 @@
         </div>
       </div>
       <div class="row">
-         <nav class="top-bar" data-topbar>
+       <!--  <nav class="top-bar" data-topbar> -->
 
-          <?php
-          wp_nav_menu(array(
-            'container' => 'div',
-            'container_id' => 'global_nav',
-            'theme_location' => 'MainMenu',
-            'depth' => 5,
-            ));
-          ?>
-       <!--   <ul class="title-area">
-            <li class="name">
-              <h1><a href="#">My Site</a></h1>
-            </li>
+
+<nav class="top-bar" role="navigation" data-topbar>
+          <ul class="name title-area">
+            <!-- li class="name">
+               <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></h1>
+            </li> -->
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
           </ul>
-
           <section class="top-bar-section">
-
-            <ul class="left">
-              <li><a href="#">Left Nav Button</a></li>
-              <li><a href="#">TEST</a></li>
-            </ul>
-          </section> -->
+            <?php
+              wp_nav_menu(
+                array(
+                  'container' => false,
+                  'container_class' => '',
+                  'menu' => '',
+                  'menu_class' => 'top-bar-menu left',
+                  'theme_location' => 'MainMenu',
+                  'before' => '',
+                  'after' => '',
+                  'link_before' => '',
+                  'link_after' => '',
+                  'depth' => 5,
+                  'fallback_cb' => false,
+                 /* 'walker' => new top_bar_walker() */
+                )
+              );
+            ?>
+          </section>
         </nav>
       </div>
 
@@ -103,7 +109,7 @@
               </div>
         </div>
       </div>
-    <?php endif; // トップページだけに表示したいもの ?>
+    <?php endif; // is_home , is_front_page ?>
     </header>
 
     <div id="content" class="row">

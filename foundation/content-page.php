@@ -1,3 +1,4 @@
+<div class="large-9 medium-9 columns mainarea">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -13,3 +14,4 @@
 		?>
 	</div>
 </article>
+</div>

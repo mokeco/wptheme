@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
-	<section id="primary" class="content-area col-md-9">
+	<div id="primary" class="large-9 medium-9 columns mainarea">
+	<section>
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -81,6 +81,6 @@
 
 		</main>
 	</section>
-
+</div><!-- #primary -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

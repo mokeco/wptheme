@@ -3,7 +3,7 @@
  * @package AistearTemplate_Este
  */
 ?>
-<div class="large-9 medium-9 columns mainarea">
+<div class="large-12 medium-12 columns mainarea">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><!--<a href="<?php the_permalink(); ?>" rel="bookmark">--><?php the_title(); ?><!--</a>--></h1>

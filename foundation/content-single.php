@@ -3,7 +3,7 @@
  * @package AistearTemplate_Este
  */
 ?>
-
+<div class="large-9 medium-9 columns mainarea">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -58,3 +58,4 @@
 		<?php edit_post_link( __( 'Edit', 'AistearTemplate_Este' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
+</div>
